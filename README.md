@@ -13,7 +13,7 @@ abstract: |
 # Metodologia di lavoro
 
 
-# Supporti (video, immagini, link)
+# Storico del progetto
 
 
 # CONCLUSIONE
