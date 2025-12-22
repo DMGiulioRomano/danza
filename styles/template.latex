@@ -24,24 +24,16 @@ $for(classoption)$
 $endfor$
 ]{$documentclass$}
 
-% ============================================================================
-% GEOMETRIA PAGINA - Margini conservatorio
-% ============================================================================
-\usepackage[
-  a4paper, 
-  top=2.5cm, 
-  bottom=2.5cm, 
-  left=2cm, 
-  right=2cm
-]{geometry}
+% +----------------------------------+
+% | FONT FAMILY                      |
+% +----------------------------------+
 
-% ============================================================================
-% FONT - Liberation Sans/Arial con logica condizionale
-% ============================================================================
-\usepackage{fontspec}
-\usepackage{etoolbox}
-
-\renewcommand{\familydefault}{\sfdefault}
+$if(fontfamily)$
+\usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
+$else$
+% Set default font (Latin Modern)
+\usepackage{lmodern}
+$endif$
 
 % ============================================================================
 % INTERLINEA E PARAGRAFI
@@ -52,37 +44,6 @@ $endfor$
 % Paragrafi: niente rientro, spazi tra accapi
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1\baselineskip}
-
-% ============================================================================
-% TITOLI SEZIONI - Formattazione conservatorio
-% ============================================================================
-\usepackage{styles/titlesec}
-
-% SEZIONI: 12pt bold UPPERCASE
-\titleformat{\section}
-  {\bfseries\fontsize{12}{14}\selectfont}
-  {\thesection}
-  {1em}
-  {\MakeUppercase}
-
-% SOTTOSEZIONI: 12pt italic bold
-\titleformat{\subsection}
-  {\itshape\bfseries\fontsize{12}{14}\selectfont}
-  {\thesubsection}
-  {1em}
-  {}
-
-% SOTTOSOTTOSEZIONI: 12pt italic
-\titleformat{\subsubsection}
-  {\itshape\fontsize{12}{14}\selectfont}
-  {\thesubsubsection}
-  {1em}
-  {}
-
-% Spaziatura titoli
-\titlespacing{\section}{0pt}{12pt plus 3pt minus 3pt}{6pt plus 2pt minus 2pt}
-\titlespacing{\subsection}{0pt}{10pt plus 2pt minus 2pt}{5pt plus 1pt minus 1pt}
-\titlespacing{\subsubsection}{0pt}{8pt plus 1pt minus 1pt}{4pt plus 1pt minus 1pt}
 
 % ============================================================================
 % HEADER/FOOTER - Solo numero pagina al centro
@@ -311,26 +272,46 @@ $endif$
 $endif$
   pdfcreator={LaTeX via pandoc}}
 
+
 % +----------------------------------+
-% | MAESTRI                          |
+% | CUSTOM PROJECT STYLING           |
 % +----------------------------------+
 
-$if(maestri)$
+% Pacchetti necessari
+\usepackage{etoolbox}
+\usepackage[hmargin=2cm, vmargin=2.5cm]{geometry}
+
+% Title formatting
+\usepackage{styles/titlesec}
+\titleformat{\section}[block]{\normalfont\Large\bfseries\centering}{\thesection}{1em}{}
+\titleformat{\subsection}[block]{\normalfont\Large\bfseries\centering}{}{1em}{}
+
+
+% List spacing
+\usepackage{styles/enumitem}
+\setlist[itemize]{itemsep=0pt, topsep=0pt}
+
+
+% +----------------------------------+
+% | artisti                          |
+% +----------------------------------+
+
+$if(artisti)$
 % Calcola width direttamente in LaTeX
 \makeatletter
-\newcount\maestricount
-\maestricount=0
-$for(maestri)$
-\advance\maestricount by 1
+\newcount\artisticount
+\artisticount=0
+$for(artisti)$
+\advance\artisticount by 1
 $endfor$
-\ifnum\maestricount>2
-  \newcommand{\maestriwidth}{0.3}
+\ifnum\artisticount>2
+  \newcommand{\artistiwidth}{0.3}
 \else
-  \newcommand{\maestriwidth}{0.45}
+  \newcommand{\artistiwidth}{0.45}
 \fi
 \makeatother
 $else$
-\newcommand{\maestriwidth}{0.45}
+\newcommand{\artistiwidth}{0.45}
 $endif$
 
 % ============================================================================
@@ -364,10 +345,10 @@ $if(title)$
     }
     \vspace{.5cm}
 
-    % Maestri - usa sia variabile Pandoc che comando LaTeX
+    % Artisti - usa sia variabile Pandoc che comando LaTeX
     $if(artisti)$
-    $for(artisti)$%
-    \begin{minipage}{\maestriwidth\textwidth}
+    $for(artisti)$
+    \begin{minipage}{\artistiwidth\textwidth}
       \centering
       \textbf{$artisti.nome$}%
       $if(artisti.ruolo)$\\[0.2em]\textit{$artisti.ruolo$}$endif$%
@@ -379,6 +360,12 @@ $if(title)$
     \vskip 1.5em%
     $endif$
     
+    $if(graphics)$
+      \vspace{1cm}
+      \includegraphics[width=0.4\textwidth]{docs/images/immagini-000.png}
+      \vspace{1cm}
+    $endif$
+
     % Dati citazione
     {
         {\small\itshape $citazione$} ($autoreCitazione$) \par
