@@ -382,7 +382,7 @@ $if(title)$
     % Dati citazione
     {
         \normalsize
-        $citazione$ \\
+        $citazione$
         \par
     }
     \vspace{.5cm}
