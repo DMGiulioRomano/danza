@@ -381,10 +381,8 @@ $if(title)$
     
     % Dati citazione
     {
-        \normalsize\itshape
-        $citazione$
-        \par
-        $autoreCitazione$
+        {\small\itshape $citazione$} ($autoreCitazione$) \par
+        
     }
     \vspace{.5cm}
     
