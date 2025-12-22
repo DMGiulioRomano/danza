@@ -1,11 +1,8 @@
 title: "BAGLIORI"
 subtitle: "ANATOMIE DECENTRATE"
 author: "Marta Sponzilli"
-conservatorio: "Scheda Artistica"
-citta: "L'Aquila"
-corso: " "
-esame: "Sintesi e Campionamento"
-date: "15/07/2025"
+principale: "Scheda Artistica"
+citazione: "La concentrazione sul corpo sottile è alla base di forme di empatia che si possono instaurare tra chi esegue il movimento e chi osserva. È possibile talvolta percepire i movimenti osservati come se fossero eseguiti in prima persona, provando sensazioni vive. Questo perché il corpo che insegue le linee del prana non è un circuito chiuso, ma qualcosa che chiama verso di sé. Diviene un centro magnetico."
 documentclass: article
 fontsize: 12pt
 toc: true
