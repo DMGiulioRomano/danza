@@ -13,9 +13,6 @@ abstract: |
 # Metodologia di lavoro
 
 
-# Risultati attesi
-
-
 # Supporti (video, immagini, link)
 
 
