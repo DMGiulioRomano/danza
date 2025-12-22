@@ -1,1 +1,1 @@
-# Biografia e collaborazioni
+# Implicazioni
