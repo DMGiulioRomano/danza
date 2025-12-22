@@ -384,6 +384,7 @@ $if(title)$
         \normalsize\itshape
         $citazione$
         \par
+        $autoreCitazione$
     }
     \vspace{.5cm}
     
