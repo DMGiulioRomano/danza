@@ -1,1 +1,1 @@
-# Obiettivi della residenza
+# Scopo del Progetto Artistico
