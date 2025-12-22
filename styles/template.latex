@@ -311,6 +311,28 @@ $endif$
 $endif$
   pdfcreator={LaTeX via pandoc}}
 
+% +----------------------------------+
+% | MAESTRI                          |
+% +----------------------------------+
+
+$if(maestri)$
+% Calcola width direttamente in LaTeX
+\makeatletter
+\newcount\maestricount
+\maestricount=0
+$for(maestri)$
+\advance\maestricount by 1
+$endfor$
+\ifnum\maestricount>2
+  \newcommand{\maestriwidth}{0.3}
+\else
+  \newcommand{\maestriwidth}{0.45}
+\fi
+\makeatother
+$else$
+\newcommand{\maestriwidth}{0.45}
+$endif$
+
 % ============================================================================
 % INIZIO DOCUMENTO
 % ============================================================================
