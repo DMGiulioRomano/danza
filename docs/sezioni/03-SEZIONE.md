@@ -1,5 +1,2 @@
-# Metodologia di lavoro
+# Metodologia
 
-- metodologia danza
-- metodologia musica
-- pratica d'insieme
