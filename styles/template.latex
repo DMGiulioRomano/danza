@@ -59,6 +59,7 @@ $endif$
 % PACCHETTI BASE
 % ============================================================================
 \usepackage{amsmath,amssymb}
+\usepackage[hmargin=2cm, vmargin=2.5cm]{geometry}
 
 % Miglioramenti tipografici
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -278,7 +279,7 @@ $endif$
 
 % Pacchetti necessari
 \usepackage{etoolbox}
-\usepackage[hmargin=2cm, vmargin=2.5cm]{geometry}
+
 
 % Title formatting
 \usepackage{styles/titlesec}
