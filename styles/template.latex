@@ -48,19 +48,17 @@ $endif$
 % ============================================================================
 % HEADER/FOOTER - Solo numero pagina al centro
 % ============================================================================
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyfoot[C]{\thepage}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\fancyfoot[C]{\thepage}
+%\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\footrulewidth}{0pt}
 
 % ============================================================================
 % PACCHETTI BASE
 % ============================================================================
 \usepackage{amsmath,amssymb}
-\usepackage[hmargin=2cm, vmargin=2.5cm]{geometry}
-
 
 % Miglioramenti tipografici
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
