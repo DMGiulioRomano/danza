@@ -7,11 +7,11 @@ artisti:
     ruolo: "Danza e Coreografia"
     qualifica: "Progetto coreografico"
   - nome: "Giulio Romano De Mattia"
-    ruolo: "Suono"
-    qualifica: "Suono"
+    ruolo: "Musicista"
+    qualifica: "Catena Elettroacustica"
   - nome: "Marco Di Gasbarro"
-    ruolo: "Suono"
-    qualifica: "Suono"
+    ruolo: "Musicista"
+    qualifica: "Percussioni aumentate"
 documentclass: article
 fontsize: 12pt
 toc: true
@@ -23,3 +23,6 @@ sansfont:
 monofont:
 artisti-width: '0.3'
 graphics: true
+geometry:
+  - hmargin=2cm
+  - vmargin=2.5cm
