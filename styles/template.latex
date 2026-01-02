@@ -340,7 +340,6 @@ $if(title)$
           {\normalsize\itshape $subtitle$ \par}
         $endif$
     }
-    \vspace{.5cm}
 
     % Artisti - usa sia variabile Pandoc che comando LaTeX
     $if(artisti)$
@@ -358,7 +357,6 @@ $if(title)$
     $endif$
     
     $if(graphics)$
-      \vspace{.5cm}
       \includegraphics[width=0.4\textwidth]{docs/images/immagini-000.png}
       \vspace{.5cm}
     $endif$
