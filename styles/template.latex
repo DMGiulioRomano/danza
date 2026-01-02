@@ -334,7 +334,7 @@ $if(title)$
     \centering
     % Titolo
     {
-        \large\bfseries
+        \Huge\bfseries
         \MakeUppercase{$title$} \par
         $if(subtitle)$
           {\normalsize\itshape $subtitle$ \par}
