@@ -364,7 +364,7 @@ $if(title)$
 
     % Dati citazione
     $if(citazione)$
-    \begin{minipage}{0.8*\textwidth}
+    \begin{minipage}{0.8\textwidth}
         {\small\itshape $citazione$} ($autoreCitazione$) \par
     \end{minipage} 
     $endif$
