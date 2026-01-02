@@ -353,12 +353,12 @@ $if(title)$
     $sep$\hfill%
     $endfor$
     \par
-    \vskip 1.5em%
     $endif$
     
     $if(graphics)$
-      \includegraphics[width=0.4\textwidth]{docs/images/immagini-000.png}
-      \vspace{.5cm}
+\setlength{\fboxsep}{5pt}
+\fcolorbox{black}{white}{\includegraphics[width=0.4\textwidth]{docs/images/immagini-000.png}}
+%\includegraphics[width=0.4\textwidth]{docs/images/immagini-000.png}
     $endif$
 
     % Dati citazione
@@ -380,6 +380,13 @@ $if(title)$
     \vspace*{1cm}
 \end{titlepage}
 $endif$
+
+% ============================================================================
+% CORREZIONE NUMERAZIONE PAGINE
+% ============================================================================
+\clearpage
+\setcounter{page}{1}  % Resetta a 1 dopo il frontespizio
+\pagestyle{plain} 
 
 % ============================================================================
 % INCLUDE BEFORE (da YAML)
