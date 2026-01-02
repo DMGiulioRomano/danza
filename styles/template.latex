@@ -373,7 +373,6 @@ $if(title)$
     $if(abstract)$
     \begin{minipage}{0.9\textwidth}
         \centering\large\bfseries Abstract \par
-        \vspace{0.5cm}
         \normalsize\raggedright\mdseries
         $abstract$
     \end{minipage}
