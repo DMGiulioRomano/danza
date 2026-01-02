@@ -25,6 +25,14 @@ $endfor$
 ]{$documentclass$}
 
 % +----------------------------------+
+% | GEOMETRIA PAGINA                 |
+% +----------------------------------+
+
+$if(geometry)$
+\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
+$endif$
+
+% +----------------------------------+
 % | FONT FAMILY                      |
 % +----------------------------------+
 
