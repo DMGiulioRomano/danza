@@ -373,8 +373,7 @@ $if(title)$
     % Riassunto
     $if(abstract)$
     \begin{minipage}{\textwidth}
-        \centering\large\bfseries Abstract \par
-        \normalsize\mdseries\centering
+        {\centering\large\bfseries Abstract} \par
         $abstract$
     \end{minipage}
     $endif$
