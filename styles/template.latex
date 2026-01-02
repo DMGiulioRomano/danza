@@ -370,12 +370,12 @@ $if(title)$
     $endif$
     \vspace{.5cm}
     
-    % Riassunto
+    % Abstract
     $if(abstract)$
-    \begin{minipage}{\textwidth}
         {\centering\large\bfseries Abstract} \par
-        $abstract$
-    \end{minipage}
+        \begin{minipage}{\textwidth}
+          $abstract$
+        \end{minipage}
     $endif$
 \end{titlepage}
 $endif$
